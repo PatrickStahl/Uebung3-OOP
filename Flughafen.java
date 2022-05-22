@@ -62,6 +62,7 @@ class Airport
 
     Airport (int maxFlights)
     {
+        //erstellt Arrays in der angegebenen Größe
         NumberArray = new int[maxFlights];
         LocationArray = new String[maxFlights];
         GateArray = new String[maxFlights];
