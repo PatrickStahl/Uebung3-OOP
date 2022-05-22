@@ -71,7 +71,8 @@ class Airport
 
     public void addNewFlight (Flight flight)
     {
-        Anzahl++; //existiert, damit Programm sieht, ob im Array noch Platz ist
+        //existiert, damit Programm sieht, ob im Array noch Platz ist
+        Anzahl++; 
         for(int i = 0; i<NumberArray.length; i++)
         {
             if (NumberArray[i] == flight.flightNumber)
@@ -102,10 +103,12 @@ class Airport
     {
         for (int i=0; i<NumberArray.length;i++)
         {
-            if(NumberArray[i]==flightNumber) //passende Nummer gefunden
+            //passende Nummer gefunden
+            if(NumberArray[i]==flightNumber) 
             {
                 System.out.println("Flug " + flightNumber+ " entfernt!");
-                for(int j = i; j<NumberArray.length-1;j++) //alle Flüge werden eins vorgezogen, der letzte Flug existiert nun zweimal
+                //alle Flüge werden eins vorgezogen, der letzte Flug existiert nun zweimal
+                for(int j = i; j<NumberArray.length-1;j++) 
                 {
                     NumberArray[j]=NumberArray[j+1];
                     LocationArray[j]=LocationArray[j+1];
@@ -121,9 +124,11 @@ class Airport
         GateArray[Anzahl]="-";
         TimeArray[Anzahl]="-";
         InOutArray[Anzahl]=false;
-        Anzahl--; //Da Flug entfernt wurde ist im Array wieder ein Platz mehr frei
+        //Da Flug entfernt wurde ist im Array wieder ein Platz mehr frei
+        Anzahl--; 
     }
     
+    //ich bin mir nicht sicher, ob eingehend true oder falsch sein soll
     public void listDepaturesOnScreen() //ausgehend
     {
         System.out.println("");
