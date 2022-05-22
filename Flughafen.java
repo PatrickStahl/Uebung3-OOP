@@ -59,7 +59,7 @@ class Airport
     private boolean [] InOutArray;
     private int Anzahl;
 
-    public Airport (int maxFlights)
+    Airport (int maxFlights)
     {
         NumberArray = new int[maxFlights];
         LocationArray = new String[maxFlights];
@@ -69,7 +69,7 @@ class Airport
         Anzahl = -1;
     }
 
-    public void addNewFlight (Flight flight)
+    void addNewFlight (Flight flight)
     {
         //existiert, damit Programm sieht, ob im Array noch Platz ist
         Anzahl++; 
@@ -99,7 +99,7 @@ class Airport
         }
     }
 
-    public void removeFlight (int flightNumber)
+    void removeFlight (int flightNumber)
     {
         for (int i=0; i<NumberArray.length;i++)
         {
@@ -129,7 +129,8 @@ class Airport
     }
     
     //ich bin mir nicht sicher, ob eingehend true oder falsch sein soll
-    public void listDepaturesOnScreen() //ausgehend
+    
+    void listDepaturesOnScreen() //ausgehend
     {
         System.out.println("");
         System.out.println("Ausgehende Fluege:");
@@ -146,7 +147,7 @@ class Airport
         }
     }
     
-    public void listArrivalsOnScreen() //eingehend
+    void listArrivalsOnScreen() //eingehend
     {
         System.out.println("");
         System.out.println("Eingehende Fluege:");
