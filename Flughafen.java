@@ -4,8 +4,9 @@ public class Flughafen
     {
         Airport airportTest = new Airport(2);
 
-        //ich war bis jetzt zu faul für eine benutztereingabe (btw bin mir gar nicht //
-        //sicher ob man das überhaupt machen soll), weswegen man das hier machen wuss//
+        //ich war bis jetzt zu faul für eine Benutztereingabe (bzw bin mir gar nicht //
+        //sicher ob man das überhaupt machen soll). Deswegen kann man das hier wie bei//
+        //den drei Beispielen testen//
 
         Flight flug1 = new Flight();
         flug1.flightNumber=187;
