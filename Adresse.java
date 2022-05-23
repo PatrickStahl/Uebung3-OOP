@@ -2,13 +2,19 @@
 /* Das habe ich noch nicht gemacht*/ 
 
 
-public class Adresse
+class Adresse
 {
 
-    private String straße = "Ernst-Thälmann-Str";
-    private String plz = "98724";
-    private String ort = "Piesau";
+    private String straße;
+    private String plz;
+    private String ort;
 
+    public void Adresse (String straße, String plz, String ort)
+    {
+        this.straße = straße;
+        this.plz = plz;
+        this.ort = ort;
+    }
     public String getStraße()
     {
         return straße;
@@ -30,8 +36,18 @@ public class Adresse
 
 class Hörsaal
 {
-    int plätze;
-    int Vorlesung [];
+    private int plätze;
+    private int Vorlesung [];
+
+    public void Hörsaal(int plz, Adresse adr, Vorlesung[] vlg)
+    {
+        this.plätze = plz;
+        Adresse Hörsaal=new Adresse();
+        adr = Hörsaal.Adresse("", "", "");
+        //plz=Hörsaal.getStraße();
+        //adr=Hörsaal.Adresse();
+
+    }
 
     int getPlätze()
     {
@@ -59,4 +75,7 @@ class Labor
     int plätze;
 }
 
+class Vorlesung
+{
 
+}
