@@ -1,3 +1,5 @@
+//hier noch objectArray stuff ergänzen
+
 public class Flughafen 
 {
     public static void main(String[] args) 
