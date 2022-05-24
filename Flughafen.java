@@ -215,6 +215,7 @@ public class Flughafen
     }    
 }
 
+//konstruktor für Flight
 class Flight
 {
     int flightNumber; // Flugnummer
@@ -229,17 +230,17 @@ class Airport
     private Flight[] Array;
     private int Anzahl;
 
+    //konstruktor für Airport
     Airport (int maxFlights)
     {
         //erstellt Arrays in der angegebenen Größe
-        
         Array = new Flight[maxFlights];
         for(int i = 0; i<Array.length;i++)
             {
+                //weißt jedem Teil des Arrays ein leeres Flight object zu
                 Array[i] = new Flight();
             }
         Anzahl = -1;
-        //System.out.println("Array erstellt!");
     }
 
     void addNewFlight (Flight flight)
@@ -247,9 +248,9 @@ class Airport
         //existiert, damit Programm sieht, ob im Array noch Platz ist
         Anzahl++;
 
+        //doppelter Flug
         for(int i = 0; i<Array.length; i++)
         {
-
             if (Array[i].flightNumber == flight.flightNumber)
             {
                 System.out.println("Flug existiert bereits");
@@ -257,6 +258,7 @@ class Airport
             }
         }
 
+        //zu viele Flüge
         if(Anzahl>Array.length-1)
         {
             System.out.println("Maximale Anzahl an Flügen überschritten!");
@@ -265,6 +267,7 @@ class Airport
         else
         {
             System.out.println("Flug " + flight.flightNumber+ " hinzugefügt!");
+            //Dem nächsten freien Arrayplatz (sieht man an Anzahl) wird der eingegebene Flug zugewiesen
             this.Array[Anzahl] = flight;
         }
     }
@@ -282,6 +285,7 @@ class Airport
                 {
                     Array[j] = Array[j+1];
                 }
+                //Der letzte (doppelte) Wert wird mit einem leeren object Flight ersetzt, was später wieder belegt werden kann
                 Array[Anzahl] = new Flight();
             }
         }
