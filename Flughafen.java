@@ -42,7 +42,6 @@ public class Flughafen
     }    
 }
 
-//konstruktor für Flight
 class Flight
 {
     int flightNumber; // Flugnummer
@@ -57,7 +56,6 @@ class Airport
     private Flight[] Array;
     private int Anzahl;
 
-    //konstruktor für Airport
     Airport (int maxFlights)
     {
         //erstellt Arrays in der angegebenen Größe
@@ -74,7 +72,6 @@ class Airport
     {
         //existiert, damit Programm sieht, ob im Array noch Platz ist
         Anzahl++;
-
         //doppelter Flug
         for(int i = 0; i<Array.length; i++)
         {
